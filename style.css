@@ -1,0 +1,627 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-x: hidden;
+    height: 3000px;
+}
+
+/* HEADER */
+.header {}
+
+.header__info {
+    height: 40px;
+    background-color: #192945;
+}
+
+.header__info-social {
+    padding-left: 10px;
+}
+
+
+.header__info-facebook i,
+.header__info-twister i,
+.header__info-instagram i,
+.header__info-youtube i {
+    color: white;
+    font-size: 0.9rem;
+    margin: 0 10px;
+}
+
+.header__info-facebook i:hover,
+.header__info-twister i:hover,
+.header__info-instagram i:hover,
+.header__info-youtube i:hover {
+    color: #6098f1;
+    transition: linear 0.2s;
+}
+
+.header__info-menu a {
+    color: white;
+}
+
+.header__info-menu a:hover {
+    color: #6098f1;
+    transition: linear 0.2s;
+}
+
+.header__info-menu .nav-item {
+    position: relative;
+
+}
+
+.header__info-menu .nav-item::after {
+    content: "";
+    position: absolute;
+    height: 14px;
+    border-right: 0.1px solid rgba(255, 255, 255, 0.5);
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.header__info-menu .nav-item:last-child::after {
+    display: none;
+}
+
+.header__body {
+    height: 84px;
+    border-bottom: 1px solid #E5E5E5;
+}
+
+.header__body-brand {
+    text-decoration: none;
+
+}
+
+.header__body-brand img {
+    height: 80px;
+    margin-left: 8px;
+}
+
+.header__body-brand span {
+    color: #192945;
+    font-weight: 500;
+    font-size: 26px;
+}
+
+
+.header__body-navbar .navbar {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 55px;
+}
+
+.header__body-navbar .nav-item {
+    padding: 0 10px;
+    position: relative;
+}
+
+.header__body-navbar .nav-item:hover .list-group {
+    display: block;
+    animation: slideDown ease-in 0.2s forwards;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(0);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(3px);
+        opacity: 1;
+
+    }
+}
+
+.header__body-navbar .nav-link {
+    color: #192945;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.header__body-navbar .nav-link:hover {
+    color: #192945;
+}
+
+.header__body-navbar .list-group {
+    list-style: none;
+    background-color: black;
+    width: 230px;
+    position: absolute;
+    margin-top: 18px;
+    margin-left: -18px;
+    box-shadow: 0 0 6px 2px rgb(212, 210, 210);
+    border-radius: 3px;
+    display: none;
+    overflow: hidden;
+}
+
+.header__body-navbar .list-group-item {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 36px;
+    border-width: 0 0 1px 0 !important;
+    color: #192945;
+}
+
+.header__body i {
+    font-size: 24px;
+    margin-right: 28px;
+}
+
+.header__body-search #nav-icon:hover {
+    cursor: pointer;
+}
+
+.header__body-search #search-icon:hover {
+    color: #147DFE;
+    transition: linear 0.2s;
+}
+
+#header-canvas {
+    width: 80%;
+}
+
+.offcanvas-header .btn-close {
+    /* display: block; */
+    transform: translateX(-20px) translateY(10px);
+    color: #147DFE !important;
+}
+
+.offcanvas-header .btn-close:focus {
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+
+.offcanvas-body p {
+    padding-left: 30px;
+    line-height: 80px;
+    color: #566276;
+}
+
+.offcanvas-body p:hover {
+    color: #147DFE;
+    transition: linear 0.2s;
+    cursor: pointer;
+}
+
+/* Body */
+
+.body-img-main {
+    width: 100%;
+    height: 492px;
+    position: relative;
+    background-image: url("https://wallpapersmug.com/download/1920x1080/7a22c5/forest_mountains_sunset_cool_weather_minimalism.jpg");
+    background-repeat: none;
+    background-size: cover;
+    z-index: -1;
+}
+
+.body-img-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(25, 41, 69, 0.7);
+    /* backdrop-filter: blur(100px); */
+
+}
+
+.body-footer {
+    height: 130px;
+    background-color: white;
+    transform: translateY(-50%);
+    box-shadow: rgb(245, 240, 240) 0px 20px 20px 0px;
+    z
+}
+
+/* .body-footer-item{
+    width: 100;
+    height: 100%;
+    margin-top: 0;
+    padding-top: 0;
+    background-color: white;
+    margin-top: 50px;
+    
+} */
+
+.body-footer .nav-item {
+    background-color: #F7F7F7;
+    margin: 10px;
+    width: 234px;
+    height: 62px;
+}
+
+.body-footer .nav-item:last-child {
+    background-color: #4688F2;
+
+}
+
+.body-footer .nav-item:last-child:hover {
+    background-color: #2D394B;
+    transition: linear 0.2s;
+}
+
+.body-footer .nav-item {
+    position: relative;
+}
+
+.body-footer .nav-item div {
+    flex: 1;
+    cursor: pointer;
+}
+
+
+.body-footer .nav-item:nth-child(1) .dropdown-menu,
+.body-footer .nav-item:nth-child(2) .dropdown-menu {
+    width: 160px;
+    height: 150px;
+    overflow: auto;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #ebeaea;
+    box-shadow: none;
+    position: absolute;
+    top: 78%;
+    transform: translateX(38%);
+    /* z-index: -1; */
+    animation: zoomIn 0.2s linear;
+    transform-origin: 50% 0;
+}
+
+
+
+
+/* .zoom-animation.zoom-in {
+    animation: zoomIn 0.2s linear;
+}
+
+.zoom-animation.zoom-out {
+    animation: zoomOut 0.2s linear;
+} */
+
+@keyframes zoomIn {
+    from {
+        top: 78%;
+        transform: translateX(38%) scale(0);
+
+        opacity: 0;
+        /* Độ trong suốt ban đầu */
+    }
+
+    to {
+        top: 78%;
+        transform: translateX(38%) scale(1);
+
+        opacity: 1;
+        /* Độ trong suốt sau khi zoom out */
+    }
+}
+
+@keyframes zoomOut {
+    from {
+        top: 78%;
+        transform: translateX(38%) scale(1);
+
+        opacity: 1;
+        /* Độ trong suốt ban đầu */
+    }
+
+    to {
+        top: 78%;
+        transform: translateX(38%) scale(0);
+
+        opacity: 0;
+        /* Độ trong suốt sau khi zoom out */
+    }
+}
+
+
+
+
+.body-footer .nav-item .dropdown-item {
+    background-color: #fff;
+    border-left: 1px solid #EAEAEA;
+    border-right: 1px solid #EAEAEA;
+    line-height: 40px;
+    font-size: 1.1rem;
+
+}
+
+.body-footer .nav-item .dropdown-item:first-child {
+    border-top: 1px solid #EAEAEA;
+}
+
+.body-footer .nav-item .dropdown-item:last-child {
+    border-bottom: 1px solid #EAEAEA;
+}
+
+
+
+
+.body-footer .nav-item .dropdown-item:hover {
+    border-radius: 0;
+    background-color: #F7F7F7;
+    transition: linear 0.3s;
+}
+
+
+
+.body-footer .nav-item i {
+    color: #4688F2;
+}
+
+.body-footer .dropdown-menu {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 0 0 3px 3px;
+    border: none;
+    /* box-shadow: 0 0 0 2px #F9F9F9; */
+
+}
+
+.body-footer .dropdown-toggle {
+    padding-left: 10px;
+}
+
+.body-footer .dropdown-item-custom {
+    padding: 0 15px;
+}
+
+.dropdown-item-custom input {
+    width: 100%;
+    /* ::-webkit-slider-thumb */
+}
+
+input[type="range"] {
+    appearance: none;
+    width: 100%;
+    /* Độ rộng của thanh input */
+    height: 3px;
+    /* Chiều cao của thanh input */
+    background-color: #e0dcdc;
+    /* Màu nền của thanh input */
+    border: none;
+    /* Loại bỏ đường viền */
+    border-radius: 0;
+    /* Bo tròn góc */
+    outline: none;
+    /* Loại bỏ đường viền khi focus */
+    margin: 10px 0;
+    /* Khoảng cách từ trên xuống và dưới lên */
+    background: linear-gradient(to left, #e0e0e0 0%, #e0e0e0 var(--thumb-percent), #4688F2 var(--thumb-percent), #4688F2 100%);
+}
+
+input[type="range"]::-webkit-slider-thumb {
+
+    appearance: none;
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-left: 8px solid #71A3F3;
+    border-bottom: 8px solid transparent;
+    /* border-radius: 50%; Hình dạng hình tròn */
+    cursor: pointer;
+
+    /* Kiểu con trỏ khi hover */
+
+}
+
+.dropdown-item-custom span {
+    color: #767F90;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+
+/* Body-footer-2 */
+.body-footer-2 {
+    width: 90%;
+    height: 364px;
+    margin: 50px auto;
+    align-self: center;
+    box-shadow: 0 0 8px 2px #F7F7F7;
+}
+
+.body-footer-2 .list-group {
+    width: 100%;
+    border-radius: 0;
+
+}
+
+.body-footer-2 .list-group div {
+    width: 100%;
+}
+
+.body-footer-2 .list-group-item #Activities__drop,
+.body-footer-2 .list-group-item #Destination__drop {
+    width: 100%;
+    height: 281px;
+    overflow: auto;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #ebeaea;
+    box-shadow: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    line-height: 30px;
+    z-index: 1;
+}
+
+.body-footer-2 .list-group-item {
+    margin: 3px 0;
+    width: 85%;
+    align-self: center;
+    line-height: 44px;
+    position: relative;
+    background-color: #F7F7F7;
+}
+
+.body-footer-2 .list-group-item i {
+    color: #4688F2;
+    padding-right: 20px;
+}
+
+.body-footer-2 .list-group-item a {
+    text-decoration: none;
+    color: black;
+    font-weight: 1s00;
+}
+
+.body-footer-2 .dropdown-menu {
+    width: 100%;
+    padding: 0 20px;
+    z-index: 1;
+}
+
+
+/* Body-packet */
+
+.body-packet {}
+
+.body-packet-tittle {
+    color: #192945;
+    font-weight: 700;
+}
+
+.body-packet-underline {
+    height: 4px;
+    width: 80px;
+    margin: 10px auto 50px;
+    background-color: #4688F2;
+}
+
+.body-packet .card {
+    padding: 0;
+    width: 80%;
+    margin: 0 auto 50px;
+    height: 578px;
+    border: none;
+    border-radius: 0;
+    box-shadow: rgb(235 234 234) 0px 0px 16px 3px;
+    z-index: 0;
+    position: relative;
+
+}
+
+.body-packet .card-tag {
+    position: absolute;
+    width: 60px;
+    height: 31px;
+    background-color: #F24646;
+    /* >>>>>>>>>>>>>>>>>>>>>>>> */
+    top: 5%;
+    left: -2%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.body-packet .card-tag span{
+    font-size: 0.8rem;
+    text-align: center;
+    line-height: 31px;
+    margin-left: 7px;
+    font-weight: 500;
+    color: white;
+}
+
+.body-packet .card-tag .card-tag-tail-1 {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 17px solid #F24646;
+    border-right: 10px solid transparent;
+    top: 0px;
+    right: -9px;
+   
+}
+
+.body-packet .card-tag .card-tag-tail-2 {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-bottom: 17px solid #F24646;
+    border-right: 10px solid transparent;
+    top: 14px;
+    left: 58px
+   
+}
+
+.body-packet .card-tag::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 8px solid #af3535;
+    border-left: 8px solid transparent;
+    top: 100%;
+
+}
+
+
+
+
+
+
+
+.body-packet .card-header {
+    width: 100%;
+    height: 295px;
+    overflow: hidden;
+    padding: 0;
+    border: none;
+    border-radius: 0 !important;
+
+}
+
+.body-packet .card-body {
+    border-radius: 0;
+}
+
+
+
+
+
+.body-packet .card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: ease-in-out 0.8s;
+    border-radius: 0;
+}
+
+.body-packet .card-img:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    background-size: cover;
+    transition: ease-in-out 0.8s;
+    border-radius: 0;
+}
+
+
+.body-packet .card-underline {
+    width: 90%;
+    height: 1px;
+    margin: 0px auto;
+    background-color: #E5E5E5;
+}
+
+.card-info i {
+    color: #adacac;
+}
+
+.card-info span {
+    color: #adacac;
+}

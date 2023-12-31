@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./fontawesome-free-6.5.1-web/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <script src="./jquery-3.6.0.js"></script>
+    <script src="./custom.js"></script>
+
+
+
+</head>
+
+<body>
+    <!-- Header -->
+    <div class="header">
+        <!-- header__info -->
+        <div class="header__info container-fluid align-items-center justify-content-between d-none d-lg-flex">
+            <!-- header__info-social -->
+            <div class="header__info-social d-flex align-items-center">
+                <div class="header__info-facebook">
+                    <a href="#">
+
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                </div>
+                <div class="header__info-twister">
+                    <a href="#">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                </div>
+                <div class="header__info-instagram">
+                    <a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
+                <div class="header__info-youtube">
+                    <a href="#">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- header__info-menu -->
+            <div class="header__info-menu">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            About Us
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            Activities
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            Block
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            Checkout
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            Contact Us
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- header__body -->
+        <div class="header__body">
+            <div class="row d-flex align-items-center justify-content-between">
+                <a href="#" class="header__body-brand d-flex align-items-center col-2">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAb1BMVEX///8AAADy8vIICAjo6Ojr6+v8/Pz09PTFxcXe3t5DQ0Oampq8vLzAwMDIyMgXFxdNTU1/f3+kpKSOjo7R0dEeHh4vLy+0tLRkZGSTk5M2NjZubm55eXna2tpWVlaGhoYnJycQEBCrq6tcXFxQUFAYtOQVAAADe0lEQVR4nO3c63aqMBCGYUZRa9V6qIrbWtva3v81bqiHAkGREDTjep/fMitfK5oJiUEAAAAAAAAAAAAAAAAAAAAAAAAAAACAirrK65eLnhot/xQ1Wv4qy1XYWO1wtWys9vX6Iq8NlX4V6TdUupJ/ItLEeymK6/5roK6FdTyU57njovPnuOracVFbc0m8dRyW7Lz91nT9Z7O2+R2ODJwVHOwLbpwVrKu7H5Ashk7KDReHevf/LjwZHYYkk/fatd4nx2IjByNzpdc+jko2rVqVWptTpXbP0ehcaP0llPasRqFZulC9v5Vb6YQiyxfLMi/LdBmPE4psbSZy4TZbxOuEIh9Vb6LeR76E5wllvKtUYTc2KviesNJE7neKpi+hyOq6iVxnVXi1hoRxX1U+Lem+nrlWR0JZlPVV0eLcpUoSlkzk/qZoihPGfdW5obbeLl2mKOG5vmpw+SJVCeXT7BNGnyXX6EoYT+Sya0r9bekV2hKKTP8mcr3pFa/Xl1Dk2FfNrnq1xoT7virbIz1YwngiNy+eoj1OwgpIeFMkJKHGhMOirv2S56GyhJ0gqvJ/bUdBR1nC8ELzbkqWAkJ9CZOH1Ffl2z8mV5kwnqGtS/OtDyvkShMGwa4k4GlZVW3Cy51SqqPSmzDudr/P5PtOd8WaEwbBqKhhWmZXNnQnDLrmqtMgt1isPGHQMhLmx689oTFjkfwzDRLeFwlJmCDhfZGQhAkS3hcJSZgg4X2RUH/Cd2P8DhJK/T3j7pir2y4SNnXYyII5fCcJjZfcTatgJc1JwqUfd2I3Mrf3Okoo48iDQyUvxbsn3SQUWdju+3fI3ILuMGHlDfHNKHqI5iRhg6dTqzIfojlIuPbgDZqy+3Kc8KvaaYYbyD1Eq5tw6scNmJXZMlov4daLA84FUrsO6yS0Phl2C6fTdfYJa53uu4HjCUnrhDVPaN5Cf1Ij4cTXGzAr2YVvlbBgR7+vBlYJ3Z12v4EwfzeVJ2z5M0WzYs46lQcyGHsrxc2vE/jDPKM2ufeQ3Co6Q+L5N3s1xafUVH12XtLfnTtGOdnp+IIv0zm/OXHqzXphTWHx5sTvR/rCeDL3Cq+b/Rm0m+vmP01nHqyEOpb65RkVPZKN/s8h389jfIQWGSUL5As9PZKF7mCc3xv8cB49HwAAAAAAAAAAAAAAAAAAAAAAAAAAgAf+A1SqJZxybQIlAAAAAElFTkSuQmCC"
+                        alt="" class="header__body-logo d-block ">
+                    <span class="header__body-tittle d-block">MARCO_WU</span>
+                </a>
+
+                <div class="header__body-navbar col-8">
+                    <nav class="navbar navbar-expand-md d-none d-lg-block ">
+                        <div class="container-fluid">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">HOME</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link dropdown-toggle" href="#">TRIPS</a>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">EUROPEAN EXPRESS</li>
+                                        <li class="list-group-item">GREECE TOUR</li>
+                                        <li class="list-group-item">LADAKH TOUR</li>
+                                        <li class="list-group-item">LONDON BLOOMSBURY</li>
+                                        <li class="list-group-item">NEW DELHI</li>
+                                        <li class="list-group-item">USA HOLIDAY TOUR</li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link dropdown-toggle" href="#">ACTIVITIES</a>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">CAMPING</li>
+                                        <li class="list-group-item">CLIMBING</li>
+                                        <li class="list-group-item">HIKING</li>
+                                        <li class="list-group-item">PARAGLIDING</li>
+                                        <li class="list-group-item">SKIING</li>
+                                        <li class="list-group-item">WATER RAFTING</li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link dropdown-toggle" href="#">DESTINATION</a>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">BHUTAN</li>
+                                        <li class="list-group-item">DUBAI</li>
+                                        <li class="list-group-item">INDIA</li>
+                                        <li class="list-group-item">LONDON</li>
+                                        <li class="list-group-item">NEPAN</li>
+                                        <li class="list-group-item">PARIES</li>
+                                        <li class="list-group-item">UNITED STATE</li>
+                                        <li class="list-group-item">VERNICE</li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link dropdown-toggle" href="#">TRIP TYPES</a>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">BUDGET TRAVEL</li>
+                                        <li class="list-group-item">CULTURAL TRIP</li>
+                                        <li class="list-group-item">HOMESTAY</li>
+                                        <li class="list-group-item">VOLUNTEER TRIP</li>
+                                        <li class="list-group-item">WEEKEND TRIP</li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">BLOCK</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+
+
+                </div>
+
+                <div class="header__body-search col-2 justify-content-end d-flex">
+                    <!-- OFFCANVAS -->
+                    <div class="offcanvas offcanvas-end" id="header-canvas">
+                        <div class="offcanvas-header justify-content-end">
+
+                            <button type="button" class="btn-close btn-close-primary"
+                                data-bs-dismiss="offcanvas"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <p class="h5 fw-normal fs-5">Home</p>
+                                <span class="dropdown-toggle pe-4"></span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <p class="h5 fw-normal fs-5">Trips</p>
+                                <span class="dropdown-toggle pe-4"></span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <p class="h5 fw-normal fs-5">Activities</p>
+                                <span class="dropdown-toggle pe-4"></span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <p class="h5 fw-normal fs-5">Destination</p>
+                                <span class="dropdown-toggle pe-4"></span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <p class="h5 fw-normal fs-5">Trip Types</p>
+                                <span class="dropdown-toggle pe-4"></span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <p class="h5 fw-normal fs-5">Blog</p>
+                                <span class="dropdown-toggle pe-4"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <i class="fa-solid fa-bars d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#header-canvas"
+                        id="nav-icon"></i>
+
+                    <!-- OFFCANVAS -->
+
+                    <i class="fa-solid fa-magnifying-glass" id="search-icon"></i>
+                </div>
+
+
+            </div>
+        </div>
+
+
+    </div>
+
+    <!-- Body -->
+    <div class="body">
+        <div class="body-img-main">
+            <div class="body-img-overlay d-flex align-items-center justify-content-center">
+                <span>
+                    <h4 class="display-5 fw-bold text-white">EXPLORE THE WORLD</h1>
+                        <p class="text-center text-white fs-5 pt-3">Best Price From Leading Book</p>
+                </span>
+            </div>
+
+        </div>
+
+        <div class="body-footer container d-none d-lg-flex align-items-center">
+            <nav class="navbar navbar-expand-lg  justify-content-center ">
+                <ul class="navbar-nav">
+                    <li class="nav-item d-flex px-4 align-items-center fs-5">
+                        <i class="fa-solid fa-map"></i>
+                        <div class="d-flex justify-content-between align-items-center ps-3" data-bs-toggle="dropdown">
+                            <a class="nav-link fw-bold fs-5" href="#">Destination</a>
+                            <span class="dropdown-toggle"></span>
+                        </div>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Destination</a>
+                            <a class="dropdown-item" href="#">Bhutan</a>
+                            <a class="dropdown-item" href="#">Dubai</a>
+                            <a class="dropdown-item" href="#">India</a>
+                            <a class="dropdown-item" href="#">London</a>
+                            <a class="dropdown-item" href="#">Paries</a>
+                            <a class="dropdown-item" href="#">United State</a>
+                            <a class="dropdown-item" href="#">Vernice</a>
+                        </div>
+                    </li>
+                    <li class="nav-item d-flex px-4 align-items-center fs-5">
+                        <i class="fa-solid fa-person-skiing"></i>
+                        <div class="d-flex justify-content-between align-items-center ps-3" data-bs-toggle="dropdown">
+                            <a class="nav-link fw-bold fs-5" href="#">Activities</a>
+                            <span class="dropdown-toggle"></span>
+                        </div>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Activities</a>
+                            <a class="dropdown-item" href="#">Camping</a>
+                            <a class="dropdown-item" href="#">Climbing</a>
+                            <a class="dropdown-item" href="#">Hiking</a>
+                            <a class="dropdown-item" href="#">Paragliding</a>
+                            <a class="dropdown-item" href="#">Skiing</a>
+                            <a class="dropdown-item" href="#">Water Rafting</a>
+                        </div>
+                    </li>
+                    <li class="nav-item d-flex px-4 align-items-center fs-5">
+                        <i class="fa-regular fa-calendar-days"></i>
+                        <div class="d-flex justify-content-between align-items-center ps-3" data-bs-toggle="dropdown">
+                            <a class="nav-link fw-bold fs-5" href="#" id="days-range">Days</a>
+                            <!-- RANGE -->
+
+
+                            <span class="dropdown-toggle"></span>
+                        </div>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-item-custom">
+
+                                <h3>
+                                    <input class="d-block" type="range" min="0" max="14" value="0" id="mySlider1">
+                                </h3>
+                                <span class="d-flex justify-content-between">
+                                    <span>0 Days</span>
+                                    <span>14 Days</span>
+                                </span>
+
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item d-flex px-4 align-items-center fs-5">
+                        <i class="fa-solid fa-dollar-sign"></i>
+                        <div class="d-flex justify-content-between align-items-center ps-3" data-bs-toggle="dropdown">
+                            <a class="nav-link fw-bold fs-5" href="#" id="budget-range">Budget</a>
+                            <span class="dropdown-toggle"></span>
+                        </div>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-item-custom">
+
+                                <h3>
+                                    <input class="d-block" type="range" min="1000" max="7500" value="1000"
+                                        id="mySlider2">
+                                </h3>
+                                <span class="d-flex justify-content-between">
+                                    <span>1000</span>
+                                    <span>7500</span>
+                                </span>
+
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item d-flex justify-content-center align-items-center fs-5">
+
+                        <a class="nav-link fw-bold fs-5 text-white" href="#">SEARCH</a>
+
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Body-footer-2 -->
+
+        <div class="body-footer-2 d-flex d-lg-none align-items-center justify-content-between">
+            <div class="list-group">
+                <div class="d-flex justify-content-center" class="d-flex justify-content-center">
+                    <li class="list-group-item d-flex justify-content-between align-items-center fs-5"
+                        id="Destination__element">
+                        <span>
+                            <i class="fa-solid fa-map"></i>
+                            <a class="fw-bold fs-5" href="#">Destination</a>
+                        </span>
+                        <span class="dropdown-toggle"></span>
+                        <div class="dropdown-menu" id="Destination__drop">
+                            <a class="dropdown-item" href="#">Destination</a>
+                            <a class="dropdown-item" href="#">Bhutan</a>
+                            <a class="dropdown-item" href="#">Dubai</a>
+                            <a class="dropdown-item" href="#">India</a>
+                            <a class="dropdown-item" href="#">London</a>
+                            <a class="dropdown-item" href="#">Paries</a>
+                            <a class="dropdown-item" href="#">United State</a>
+                            <a class="dropdown-item" href="#">Vernice</a>
+                        </div>
+                    </li>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <li class="list-group-item d-flex justify-content-between align-items-center fs-5"
+                        id="Activities__element">
+                        <span>
+                            <i class="fa-solid fa-person-skiing"></i>
+                            <a class="fw-bold fs-5" href="#">Activities</a>
+                        </span>
+                        <span class="dropdown-toggle"></span>
+                        <div class="dropdown-menu" id="Activities__drop">
+                            <a class="dropdown-item" href="#">Activities</a>
+                            <a class="dropdown-item" href="#">Camping</a>
+                            <a class="dropdown-item" href="#">Climbing</a>
+                            <a class="dropdown-item" href="#">Hiking</a>
+                            <a class="dropdown-item" href="#">Paragliding</a>
+                            <a class="dropdown-item" href="#">Skiing</a>
+                            <a class="dropdown-item" href="#">Water Rafting</a>
+                        </div>
+                    </li>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <li class="list-group-item d-flex justify-content-between align-items-center fs-5"
+                        data-bs-toggle="dropdown">
+                        <span>
+                            <i class="fa-regular fa-calendar-days"></i>
+                            <a class="fw-bold fs-5" href="#" id="days-range-2">Days</a>
+                        </span>
+                        <span class="dropdown-toggle"></span>
+                        <!-- RANGE -->
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-item-custom">
+                                <h3>
+                                    <input class="d-block" type="range" min="0" max="14" value="0" id="mySlider3">
+                                </h3>
+                                <span class="d-flex justify-content-between">
+                                    <span>0 Days</span>
+                                    <span>14 Days</span>
+                                </span>
+
+                            </li>
+                        </ul>
+                    </li>
+                </div>
+
+                <div class="d-flex justify-content-center">
+                    <li class="list-group-item d-flex justify-content-between align-items-center fs-5"
+                        data-bs-toggle="dropdown">
+
+                        <span>
+                            <i class="fa-solid fa-dollar-sign"></i>
+                            <a class="fw-bold fs-5" href="#" id="budget-range-2">Budget</a>
+                        </span>
+                        <span class="dropdown-toggle"></span>
+
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-item-custom">
+
+                                <h3>
+                                    <input class="d-block" type="range" min="1000" max="7500" value="1000"
+                                        id="mySlider4">
+                                </h3>
+                                <span class="d-flex justify-content-between">
+                                    <span>1000</span>
+                                    <span>7500</span>
+                                </span>
+
+                            </li>
+                        </ul>
+
+                    </li>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <li class="list-group-item text-center">
+                        <a class="fw-bold fs-5" fw-bold fs-5href="#">SEARCH</a>
+                    </li>
+                </div>
+            </div>
+        </div>
+
+        <div class="body-packet container-fluid">
+            <h1 class="body-packet-tittle text-center">OUR PACKETS</h1>
+            <div class="body-packet-underline"></div>
+
+            <div class="row justify-content-evenly pb-5">
+
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="card">
+                        <div class="card-tag">
+                            <span>10% Off</span>
+                            <div class="card-tag-tail-1"></div>
+                            <div class="card-tag-tail-2"></div>
+                        </div>
+                        <div class="card-header">
+                            <img src="https://images.unsplash.com/photo-1575566668200-7dcaa7b2cf28?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bmV3JTIwZGVsaGl8ZW58MHx8MHx8fDA%3D"
+                                alt="#" class="card-img">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="my-4 card-title fw-bold">New Delhi</h5>
+                            <h5 class="my-4 card-price text-primary fw-bold">$1,800</h5>
+                            <p class="my-4 card-text">Some quick example text to build on the card title and make up the
+                                bulk
+                                of the card's content.</p>
+                            <div class="my-4 card-underline"></div>
+
+                            <div class="card-info d-flex justify-content-between">
+                                <div class="card-place">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    <span>India</span>
+                                </div>
+                                <div class="card-time">
+
+                                    <i class="fa-regular fa-clock"></i>
+                                    <span>15 Days - 14 Nights</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="card">
+                        <div class="card-tag">
+                            <span>6% Off</span>
+                            <div class="card-tag-tail-1"></div>
+                            <div class="card-tag-tail-2"></div>
+                        </div>
+                        <div class="card-header">
+                            <img src="https://images.unsplash.com/photo-1485738422979-f5c462d49f74?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dXNhfGVufDB8fDB8fHww"
+                                alt="#" class="card-img">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="my-4 card-title fw-bold">USA Holiday Tour</h5>
+                            <h5 class="my-4 card-price text-primary fw-bold">$7,500</h5>
+                            <p class="my-4 card-text">Some quick example text to build on the card title and make up the
+                                bulk
+                                of the card's content.</p>
+                            <div class="my-4 card-underline"></div>
+
+                            <div class="card-info d-flex justify-content-between">
+                                <div class="card-place">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    <span>United State</span>
+                                </div>
+                                <div class="card-time">
+
+                                    <i class="fa-regular fa-clock"></i>
+                                    <span>8 Days
+                                        - 7 Nights</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="card">
+                        <div class="card-tag">
+                            <span>12% Off</span>
+                            <div class="card-tag-tail-1"></div>
+                            <div class="card-tag-tail-2"></div>
+                        </div>
+                        <div class="card-header">
+                            <img src="https://images.unsplash.com/photo-1529655683826-aba9b3e77383?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bG9uZG9ufGVufDB8fDB8fHww"
+                                alt="#" class="card-img">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="my-4 card-title fw-bold">London Bloomsbury</h5>
+                            <h5 class="my-4 card-price text-primary fw-bold">$4,500</h5>
+                            <p class="my-4 card-text">Some quick example text to build on the card title and make up the
+                                bulk
+                                of the card's content.</p>
+                            <div class="my-4 card-underline"></div>
+
+                            <div class="card-info d-flex justify-content-between">
+                                <div class="card-place">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    <span>London, Venice</span>
+                                </div>
+                                <div class="card-time">
+
+                                    <i class="fa-regular fa-clock"></i>
+                                    <span>15 Days - 14 Nights</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="card">
+                        <div class="card-tag">
+                            <span>67% Off</span>
+                            <div class="card-tag-tail-1"></div>
+                            <div class="card-tag-tail-2"></div>
+                        </div>
+                        <div class="card-header">
+                            <img src="https://images.unsplash.com/photo-1534695215921-52f8a19e7909?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Z3JlZWNlfGVufDB8fDB8fHww"
+                                alt="#" class="card-img">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="my-4 card-title fw-bold">Greece Tour</h5>
+                            <h5 class="my-4 card-price text-primary fw-bold">$1,000</h5>
+                            <p class="my-4 card-text">Some quick example text to build on the card title and make up the
+                                bulk
+                                of the card's content.</p>
+                            <div class="my-4 card-underline"></div>
+
+                            <div class="card-info d-flex justify-content-between">
+                                <div class="card-place">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    <span>London</span>
+                                </div>
+                                <div class="card-time">
+
+                                    <i class="fa-regular fa-clock"></i>
+                                    <span>15 Days - 14 Nights</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="card">
+                        <div class="card-tag">
+                            <span>33% Off</span>
+                            <div class="card-tag-tail-1"></div>
+                            <div class="card-tag-tail-2"></div>
+                        </div>
+                        <div class="card-header">
+                            <img src="https://images.unsplash.com/photo-1589019839715-e77d5c943728?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bGFkYWtoJTIwdG91cmlzbXxlbnwwfHwwfHx8MA%3D%3D"
+                                alt="#" class="card-img">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="my-4 card-title fw-bold">Ladakh Tour</h5>
+                            <h5 class="my-4 card-price text-primary fw-bold">$2,000</h5>
+                            <p class="my-4 card-text">Some quick example text to build on the card title and make up the
+                                bulk
+                                of the card's content.</p>
+                            <div class="my-4 card-underline"></div>
+
+                            <div class="card-info d-flex justify-content-between">
+                                <div class="card-place">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    <span>India</span>
+                                </div>
+                                <div class="card-time">
+
+                                    <i class="fa-regular fa-clock"></i>
+                                    <span>8 Days
+                                        - 9 Nights</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="card">
+                        <div class="card-tag">
+                            <span>50% Off</span>
+                            <div class="card-tag-tail-1"></div>
+                            <div class="card-tag-tail-2"></div>
+                        </div>
+                        <div class="card-header">
+                            <img src="https://images.unsplash.com/photo-1495563893439-5e257f2bc3ef?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fEV1cm9wZWFuJTIwRXhwcmVzc3xlbnwwfHwwfHx8MA%3D%3D"
+                                alt="#" class="card-img">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="my-4 card-title fw-bold">European Express</h5>
+                            <h5 class="my-4 card-price text-primary fw-bold">$2,500</h5>
+                            <p class="my-4 card-text">Some quick example text to build on the card title and make up the
+                                bulk
+                                of the card's content.</p>
+                            <div class="my-4 card-underline"></div>
+
+                            <div class="card-info d-flex justify-content-between">
+                                <div class="card-place">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    <span>Bhutan, Dubai</span>
+                                </div>
+                                <div class="card-time">
+
+                                    <i class="fa-regular fa-clock"></i>
+                                    <span>9 Days - 8 Nights</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+                <!-- <div class="card col-lg-3 col-md-4 col-sm-12 ">
+                    <img src="https://images.unsplash.com/photo-1575566668200-7dcaa7b2cf28?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bmV3JTIwZGVsaGl8ZW58MHx8MHx8fDA%3D"
+                        class="card-img-top img-fluid" alt="DELHI">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                            of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+                <div class="card col-lg-3 col-md-4 col-sm-12 ">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                            of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+                <div class="card col-lg-3 d-none d-lg-block col-sm-12 ">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                            of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div> -->
+            </div>
+
+
+
+
+        </div>
+
+
+
+
+    </div>
+
+
+    <!-- Footer -->
+    <div class="footer">
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
