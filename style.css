@@ -217,11 +217,13 @@ body {
 }
 
 .body-footer {
+    width: 1400px;
     height: 130px;
+    margin: 0 auto;
     background-color: white;
     transform: translateY(-50%);
     box-shadow: rgb(245, 240, 240) 0px 20px 20px 0px;
-    z
+    
 }
 
 /* .body-footer-item{
@@ -234,10 +236,20 @@ body {
     
 } */
 
+.body-footer .navbar {
+    /* margin: 0 auto; */
+    width: 100%;
+    padding: 0;
+}
+
+.body-footer .navbar-nav{
+    width: 100%;
+}
+
 .body-footer .nav-item {
     background-color: #F7F7F7;
-    margin: 10px;
-    width: 234px;
+    /* margin: 10px; */
+    width: 15%;
     height: 62px;
 }
 
