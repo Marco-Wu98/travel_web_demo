@@ -217,14 +217,13 @@ body {
 }
 
 .body-footer {
-    width: 1400px;
+    width: 1300px;
     height: 130px;
     margin: 0 auto;
     background-color: white;
     transform: translateY(-50%);
-    box-shadow: rgb(245, 240, 240) 0px 20px 20px 0px;
-    background-color: black;
-    
+    box-shadow: rgb(245, 240, 240) 0px 15px 10px 0px;
+
 }
 
 /* .body-footer-item{
@@ -243,7 +242,7 @@ body {
     padding: 0;
 }
 
-.body-footer .navbar-nav{
+.body-footer .navbar-nav {
     width: 100%;
 }
 
@@ -541,7 +540,7 @@ input[type="range"]::-webkit-slider-thumb {
     z-index: 1;
 }
 
-.body-packet .card-tag span{
+.body-packet .card-tag span {
     font-size: 0.8rem;
     text-align: center;
     line-height: 31px;
@@ -558,7 +557,7 @@ input[type="range"]::-webkit-slider-thumb {
     border-right: 10px solid transparent;
     top: 0px;
     right: -9px;
-   
+
 }
 
 .body-packet .card-tag .card-tag-tail-2 {
@@ -569,7 +568,6 @@ input[type="range"]::-webkit-slider-thumb {
     border-right: 10px solid transparent;
     top: 14px;
     left: 58px
-   
 }
 
 .body-packet .card-tag::before {
@@ -637,4 +635,150 @@ input[type="range"]::-webkit-slider-thumb {
 
 .card-info span {
     color: #adacac;
+}
+
+
+/* Body_Packet */
+
+.body-packet-item {
+    overflow: hidden;
+    position: relative;
+    padding: 0 !important;
+    margin: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 250px;
+    margin-bottom: 80px;
+    position: relative;
+
+}
+
+.body-packet-img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 50px;
+    position: relative;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+
+
+.body-packet-item::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(46, 44, 44, 0.6);
+    display: none;
+
+
+}
+
+
+
+.body-packet-item:hover.body-packet-item::after {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+.body-packet-item:hover .body-packet-img {
+    transform: scale(1.2);
+    transition: all linear 0.5s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.body-packet-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 2;
+    text-decoration: none;
+    /* 
+    -webkit-text-stroke: 1px #000;
+    Độ dày và màu của viền chữ trên trình duyệt WebKit (Chrome, Safari)
+    text-stroke: 1px #000; */
+
+}
+
+
+/* body-contac */
+.body-contact {
+    width: 100%;
+    height: 760px;
+    padding: 0 !important;
+    position: relative;
+}
+
+.body-contact-background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.body-contact-form {
+    width: 664px;
+    height: 580px;
+    /* margin: 0 auto; */
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.body-contact-form-content {
+    width: 80%;
+    height: 80%;
+    background-color: #fff;
+    /* margin: 0 auto; */
+}
+
+.form-control {
+    border-radius: 0 !important;
+    
+    background-color: #F7F7F7 !important;
+    border: none !important;
+}
+
+.form-control:focus {
+    box-shadow: none !important;
+}
+
+#name{
+    height: 50px;
+}
+
+#email {
+    width: 48%;
+    height: 50px;
+}
+
+#phone {
+    width: 48%;
+    height: 50px;
+}
+
+.btn.form-btn{
+    background-color: #4688F2 !important;
+    width: 100%;
+    margin-top: 20px;
+    height: 50px;
+}
+
+.btn.form-btn:hover{
+    background-color: #2D394B !important;
+    transition: linear 0.2s;
 }

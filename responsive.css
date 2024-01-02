@@ -1,0 +1,18 @@
+@media (min-width: 576px) { 
+    .body-packet-item{
+        height: 150px;
+    }
+ }
+
+
+@media (min-width: 768px) { 
+    .body-packet-item{
+        height: 227px;
+    }
+ }
+
+ @media (min-width: 992px) { 
+    .body-packet-item{
+        height: 376px;
+    }
+  }
